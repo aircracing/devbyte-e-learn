@@ -8,7 +8,6 @@ import { ThemeProvider } from "@/components/common/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { ModalProvider } from "@/providers/modal-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -78,7 +77,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           {children}
           <Toaster />
-          <ModalProvider />
         </ThemeProvider>
       </body>
     

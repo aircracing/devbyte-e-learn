@@ -7,10 +7,6 @@ export const routesConfig: any = {
     {
       title: "Deep Dive",
       href: "/details",
-    },
-    {
-      title: "Contact",
-      href: "/contact",
-    },
+    }
   ],
 };
