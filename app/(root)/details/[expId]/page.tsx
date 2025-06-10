@@ -43,7 +43,7 @@ export default function Experience({ params }: ExperiencePageProps) {
           {exp.topic}
         </h1>
 
-        <div href={siteConfig.lnk} className="mt-4 flex space-x-4">
+        <div  className="mt-4 flex space-x-4">
           <Image
             src={dp}
             alt={"dp"}
