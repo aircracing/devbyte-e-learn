@@ -11,7 +11,7 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 
-import logo from "@/public/logo.png";
+import dp from "@/public/dp.png";
 
 
 interface ExperiencePageProps {
@@ -41,37 +41,21 @@ export default function Experience({ params }: ExperiencePageProps) {
       <div>
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {exp.topic}
-          <div className="flex items-center">
-            {exp.githubLink && (
-              <CustomTooltip text="">
-                <Link href={exp.githubLink} target="_blank">
-                  <Icons.gitHub className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
-                </Link>
-              </CustomTooltip>
-            )}
-            {exp.websiteLink && (
-              <CustomTooltip text="">
-                <Link href={exp.websiteLink} target="_blank">
-                  <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
-                </Link>
-              </CustomTooltip>
-            )}
-          </div>
         </h1>
 
-        <div className="mt-4 flex space-x-4">
+        <div href={siteConfig.lnk} className="mt-4 flex space-x-4">
           <Image
-            src={logo}
-            alt={"logo"}
+            src={dp}
+            alt={"dp"}
             width={42}
             height={42}
             className="rounded-full bg-background"
           />
 
           <div className="flex-1 text-left leading-tight">
-            <p className="font-medium">{siteConfig.username}</p>
+            <p className="font-medium">{siteConfig.developer}</p>
             <p className="text-[12px] text-muted-foreground">
-              @{siteConfig.username}
+              @{siteConfig.id}
             </p>
           </div>
         </div>
