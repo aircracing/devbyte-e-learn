@@ -5,7 +5,7 @@ export const pagesConfig: any = {
     title: "Devbyte E-learn",
     description: "Welcome to Devbyte E-learn.",
     metadata: {
-      title: "Skill forge",
+      title: "Devbyte-E Learn",
       description: "Welcome to Devbyte E-learn.",
     },
   },
@@ -28,10 +28,10 @@ export const pagesConfig: any = {
   },
   contact: {
     title: "Contact",
-    description: "Let's connect Skill forge.",
+    description: "Let's connect Devbyte-E Learn.",
     metadata: {
       title: "Contact",
-      description: "Contact Skill forge.",
+      description: "Contact Devbyte-E Learn.",
     },
   },
 };
