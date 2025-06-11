@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 
-export const topics = [
+ const topics = [
   ...JSArray.slice(0, 1),
   ...ReactNativeArray.slice(0, 1),
   ...JSArray.slice(1, 2),
