@@ -3,8 +3,9 @@ import { Metadata } from "next";
 import PageContainer from "@/components/common/page-container";
 import ProjectCard from "@/components/experience/project-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { allTopics } from "@/config/topics";
 import { pagesConfig } from "@/config/pages";
+import { ReactNativeArray } from "@/config/rnArray/RnArray";
+import { JSArray } from "@/config/jsArray/JsArrayOne";
 
 export const metadata: Metadata = {
   title: pagesConfig.experience.metadata.title,
@@ -12,11 +13,20 @@ export const metadata: Metadata = {
 };
 
 const renderContent = (tabVal: string) => {
-  let expArr = allTopics;
-  if (tabVal === "js") {
-    expArr = expArr.filter((val) => val.type === "js");
-  } else if (tabVal === "rn") {
-    expArr = expArr.filter((val) => val.type === "rn");
+let expArr: any = [];
+  if (tabVal == "js") {
+    expArr = JSArray;
+  } else if (tabVal == "rn") {
+    expArr = ReactNativeArray;
+  } else if (tabVal == "all") {
+    const maxLength = Math.max(JSArray.length, ReactNativeArray.length);
+    const interleaved = [];
+
+    for (let i = 0; i < maxLength; i++) {
+      if (JSArray[i]) interleaved.push(JSArray[i]);
+      if (ReactNativeArray[i]) interleaved.push(ReactNativeArray[i]);
+    }
+    expArr = interleaved;
   }
 
   return (

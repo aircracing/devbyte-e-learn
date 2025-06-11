@@ -2,20 +2,20 @@
 
 export const pagesConfig: any = {
   home: {
-    title: "Skill forge",
-    description: "Welcome to SkillForge.",
+    title: "Devbyte E-learn",
+    description: "Welcome to Devbyte E-learn.",
     metadata: {
       title: "Skill forge",
-      description: "Welcome to SkillForge.",
+      description: "Welcome to Devbyte E-learn.",
     },
   },
   skills: {
     title: "Core Tech",
-    description: "Skill forge Core Tech",
+    description: "Devbyte E-learn",
     metadata: {
       title: "Core Tech",
       description:
-        "Skill forge Core Tech",
+        "Devbyte E-learn",
     },
   },
   experience: {

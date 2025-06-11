@@ -607,6 +607,89 @@ export const expoVsCli = [
   },
 ];
 
+export const reactNativeArchitecture = [
+  {
+    heading: "React Native Architecture",
+
+    bulletpoints: [
+      {
+        bulletHeading: "What is React Native Architecture?",
+        points: [
+          "React Native architecture refers to the design and structure that allows JavaScript code to communicate with native platforms (iOS and Android).",
+          "It enables React components to invoke native functionalities like camera, geolocation, etc., using a bridge between JavaScript and native code.",
+          "The architecture has evolved over time, moving from a traditional Bridge-based system to the new Fabric architecture."
+        ],
+      },
+      {
+        bulletHeading: "Old Architecture (Bridge-Based)",
+        points: [
+          "Uses a **JavaScript Bridge** to facilitate asynchronous communication between JavaScript and native modules.",
+          "JS code runs on a separate JavaScript thread, and native modules run on their own threads.",
+          "Messages pass back and forth via serialized JSON over the Bridge, which introduces latency and performance issues.",
+          "This model sometimes causes UI lag, especially in complex apps or animations."
+        ],
+      },
+      {
+        bulletHeading: "New Architecture Overview (Fabric + TurboModules + JSI)",
+        points: [
+          "The new architecture is built around three key components: **Fabric**, **TurboModules**, and **JSI (JavaScript Interface)**.",
+          "It enables synchronous and asynchronous calls between JS and native code without the bottleneck of the traditional Bridge.",
+          "Enhances performance, concurrency, and UI responsiveness, especially for large-scale apps."
+        ],
+      },
+      {
+        bulletHeading: "What is JSI (JavaScript Interface)?",
+        points: [
+          "JSI is a lightweight and high-performance interface that allows JavaScript to call native functions directly.",
+          "Eliminates the need for the traditional Bridge by embedding native objects directly in JS runtime.",
+          "Makes the app faster and more efficient by reducing the serialization and deserialization overhead."
+        ],
+      },
+      {
+        bulletHeading: "What are TurboModules?",
+        points: [
+          "TurboModules are the new way of creating native modules that take advantage of JSI.",
+          "They allow on-demand loading of modules, improving startup time and memory usage.",
+          "Modules are lazy-loaded, meaning they are only initialized when needed by the JS code."
+        ],
+      },
+      {
+        bulletHeading: "What is Fabric?",
+        points: [
+          "Fabric is the new rendering system in React Native, replacing the legacy UIManager.",
+          "It uses a concurrent rendering approach, integrated with React 18’s concurrent mode.",
+          "Improves UI consistency, responsiveness, and performance by rendering views directly via C++ code paths."
+        ],
+      },
+      {
+        bulletHeading: "Benefits of the New Architecture",
+        points: [
+          "Faster and more reliable communication between JavaScript and native code.",
+          "Improved startup time and reduced memory usage via TurboModules.",
+          "Better UI rendering performance through Fabric and concurrent rendering.",
+          "Enhanced developer experience and potential for more powerful native integrations."
+        ],
+      },
+      {
+        bulletHeading: "Challenges and Adoption Considerations",
+        points: [
+          "New architecture adoption requires upgrading to the latest React Native versions.",
+          "Custom native modules need to be updated to support JSI and TurboModules.",
+          "Full migration can be complex for large or legacy codebases but offers long-term benefits."
+        ],
+      },
+      {
+        bulletHeading: "When Should You Use the New Architecture?",
+        points: [
+          "Ideal for performance-critical apps with complex native integrations.",
+          "Recommended if you're starting a new project with React Native 0.71+.",
+          "Existing apps should plan migration strategically to gain performance and maintainability benefits."
+        ],
+      },
+    ],
+  },
+];
+
 
 export const ReactNativeArray: any[] = [
   {
@@ -616,6 +699,14 @@ export const ReactNativeArray: any[] = [
     icon: iconrn,
     pagesInfoArr: rnIntro,
   },
+  {
+    id: "React-Native-Architecture",
+    topic: "React Native Architecture",
+    type: "rn",
+    icon: iconrn,
+    pagesInfoArr: reactNativeArchitecture,
+  },
+  
   {
     id: "expoVsCli",
     topic: "Expo Vs Cli",

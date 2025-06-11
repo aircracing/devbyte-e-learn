@@ -10,25 +10,25 @@ interface SocialInterface {
 export const SocialLinks: SocialInterface[] = [
   {
     name: "Github",
-    username: "@skillforge",
+    username: "@Devbyte E-learn",
     icon: Icons.gitHub,
     link: "https://github.com",
   },
   {
     name: "LinkedIn",
-    username: "SkillForge",
+    username: "Devbyte E-learn",
     icon: Icons.linkedin,
     link: "https://www.linkedin.com",
   },
   {
     name: "Twitter",
-    username: "@skillforge",
+    username: "@Devbyte E-learn",
     icon: Icons.twitter,
     link: "https://twitter.com",
   },
   {
     name: "Gmail",
-    username: "@skillforge",
+    username: "@Devbyte E-learn",
     icon: Icons.gmail,
     link: "mailto:akidev.98@gmail.com",
   },

@@ -5,13 +5,13 @@ import { redirect } from "next/navigation";
 import { Icons } from "@/components/common/icons";
 import ExperienceDescription from "@/components/experience/exp-description";
 import { buttonVariants } from "@/components/ui/button";
-import CustomTooltip from "@/components/ui/custom-tooltip";
-import { allTopics } from "@/config/topics";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 
 import dp from "@/public/dp.png";
+import { JSArray } from "@/config/jsArray/JsArrayOne";
+import { ReactNativeArray } from "@/config/rnArray/RnArray";
 
 
 interface ExperiencePageProps {
@@ -21,6 +21,7 @@ interface ExperiencePageProps {
 }
 
 export default function Experience({ params }: ExperiencePageProps) {
+   const allTopics = [...JSArray, ...ReactNativeArray];
   let exp = allTopics.find((val:any) => val.id === params.expId);
   if (!exp) {
     redirect("/details");
